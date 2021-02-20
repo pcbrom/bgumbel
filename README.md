@@ -84,7 +84,7 @@ Please, send to: https://github.com/pcbrom/bgumbel/issues
 
 ## To cite package ‘bgumbel’ in publications use:
 
-Pedro C. Brom, Cira E. G. Otiniano, Roberto Vila and Marcelo B. Pereira (2021). bgumbel: Bimodal Gumbel distribution. R package version 0.0.0.9000.
+Pedro C. Brom, Cira E. G. Otiniano, Roberto Vila and Marcelo B. Pereira (2021). bgumbel: Bimodal Gumbel distribution. R package version 0.0.1.
 
 A BibTeX entry for LaTeX users is
 

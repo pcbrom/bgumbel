@@ -1,3 +1,3 @@
-# bgumbel 0.0.1.0000
+# bgumbel 0.0.1
 
 First version.
