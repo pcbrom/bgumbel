@@ -1,3 +1,15 @@
+<!-- # bgumbel <img src="man/figures/logo.png" align="right" /> -->
+
+<!-- [![Downloads](http://cranlogs.r-pkg.org/badges/bgumbel?color=brightgreen)](http://www.r-pkg.org/pkg/bgumbel) -->
+
+<!-- one space after links to display badges side by side -->
+
+[![Travis-CI Build
+Status](https://travis-ci.org/pcbrom/bgumbel.svg?branch=master)](https://travis-ci.org/pcbrom/bgumbel)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/bgumbel)](https://cran.r-project.org/package=bgumbel)
+[![Downloads from the RStudio CRAN
+mirror](https://cranlogs.r-pkg.org/badges/grand-total/bgumbel)](https://cran.r-project.org/package=bgumbel)
+
 
 # bgumbel
 
@@ -63,6 +75,11 @@ hist(x, probability = T)
 curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
 lines(density(x), col = 'red')
 ```
+
+
+## Issues
+
+Please, send to: https://github.com/pcbrom/bgumbel/issues
 
 
 ## To cite package ‘bgumbel’ in publications use:
