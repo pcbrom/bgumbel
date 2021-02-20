@@ -1,0 +1,35 @@
+Package: bgumbel
+Title: Bimodal Gumbel Distribution
+Version: 0.0.0.9000
+Authors@R:
+  c(person(given = "Pedro",
+           family = "C. Brom",
+           role = c("aut", "cre", "cph"),
+           email = "pcbrom@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-1288-7695", Lattes = "http://lattes.cnpq.br/0154064396756002")),
+    person(given = "Cira",
+           family = "E. G. Otiniano",
+           role = c("aut", "cph"),
+           email = "ciragotiniano@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-5619-0478")),
+    person(given = "Roberto",
+           family = "Vila",
+           role = c("aut", "cph"),
+           email = "rovig161@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0003-1073-0114")),
+    person(given = "Marcelo",
+           family = "B. Pereira",
+           role = c("aut", "cph"),
+           email = "m.p.bourguignon@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0002-1182-5193")))
+Description: Bimodal Gumbel distribution. General functions for performing extreme value analysis.
+Imports: 
+    MCMCpack,
+    coda,
+    MASS
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+Date: 2021-02-17
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
