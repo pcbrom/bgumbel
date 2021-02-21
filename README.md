@@ -92,5 +92,5 @@ A BibTeX entry for LaTeX users is
   title = {bgumbel: Bimodal Gumbel distribution},
   author = {Pedro {C. Brom} and Cira {E. G. Otiniano} and Roberto Vila and Marcelo {B. Pereira}},
   year = {2021},
-  note = {R package version 0.0.0.9000},
+  note = {R package version 0.0.1.0},
 }
