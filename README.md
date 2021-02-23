@@ -79,6 +79,60 @@ lines(density(x), col = 'red')
 ```
 
 
+## Theoretical E(X) and empirical first moment
+
+``` r
+(EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
+x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+mean(x)
+abs(EX - mean(x))/abs(EX) # relative error
+# grid 1
+mu <- seq(-5, 5, length.out = 100)
+delta <- seq(-5, 5, length.out = 100)
+z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y))
+persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
+# grid 2
+mu <- seq(-5, 5, length.out = 100)
+delta <- seq(-5, 5, length.out = 100)
+sigmas <- seq(.1, 10, length.out = 20)
+for (sigma in sigmas) {
+  z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y))
+  persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
+  Sys.sleep(.5)
+}
+```
+
+
+## Theoretical E(X^2) and empirical second moment
+
+``` r
+(EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
+x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+mean(x^2)
+abs(EX2 - mean(x))/abs(EX2) # relative error
+# Variance
+EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
+EX2 - EX^2
+var(x)
+abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
+# grid 1
+mu <- seq(-5, 5, length.out = 100)
+delta <- seq(-5, 5, length.out = 100)
+z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y))
+persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
+# grid 2
+mu <- seq(-5, 5, length.out = 100)
+delta <- seq(-5, 5, length.out = 100)
+sigmas <- seq(.1, 10, length.out = 20)
+for (sigma in sigmas) {
+  z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = sigma, delta = y))
+  persp(x = mu, y = delta, z = z, theta = -45, zlab = 'E(X^2)')
+  Sys.sleep(.5)
+}
+```
+
+
+
 ## Issues
 
 Please, send to: https://github.com/pcbrom/bgumbel/issues
@@ -86,6 +140,7 @@ Please, send to: https://github.com/pcbrom/bgumbel/issues
 
 ## To cite package ‘bgumbel’ in publications use:
 
+```
 Pedro C. Brom, Cira E. G. Otiniano, Roberto Vila and Marcelo B. Pereira (2021). bgumbel: Bimodal Gumbel distribution. R package version 0.0.1.0.
 
 A BibTeX entry for LaTeX users is
@@ -94,5 +149,6 @@ A BibTeX entry for LaTeX users is
   title = {bgumbel: Bimodal Gumbel distribution},
   author = {Pedro {C. Brom} and Cira {E. G. Otiniano} and Roberto Vila and Marcelo {B. Pereira}},
   year = {2021},
-  note = {R package version 0.0.1.0},
+  note = {R package version 0.0.1.1},
 }
+```
