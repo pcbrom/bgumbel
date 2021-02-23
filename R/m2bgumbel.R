@@ -9,16 +9,19 @@
 #' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
 #' mean(x^2)
 #' abs(EX2 - mean(x))/abs(EX2) # relative error
+#'
 #' # Variance
 #' EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
 #' EX2 - EX^2
 #' var(x)
 #' abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
+#'
 #' # grid 1
 #' mu <- seq(-5, 5, length.out = 100)
 #' delta <- seq(-5, 5, length.out = 100)
 #' z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y))
 #' persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
+#'
 #' # grid 2
 #' mu <- seq(-5, 5, length.out = 100)
 #' delta <- seq(-5, 5, length.out = 100)
@@ -61,16 +64,19 @@ m2bgumbel <- Vectorize(m2bgumbel, c('mu', 'sigma', 'delta'))
 #' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
 #' mean(x^2)
 #' abs(EX2 - mean(x))/abs(EX2) # relative error
+#'
 #' # Variance
 #' EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
 #' EX2 - EX^2
 #' var(x)
 #' abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
+#'
 #' # grid 1
 #' mu <- seq(-5, 5, length.out = 100)
 #' delta <- seq(-5, 5, length.out = 100)
 #' z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y))
 #' persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
+#'
 #' # grid 2
 #' mu <- seq(-5, 5, length.out = 100)
 #' delta <- seq(-5, 5, length.out = 100)
