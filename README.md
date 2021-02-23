@@ -164,11 +164,11 @@ fit # print results
 # Kolmogorov-Smirnov Tests
 mu.sigma.delta <- fit$estimate$estimate
 ks.test(
- x, 
- y = 'pbgumbel', 
- mu = mu.sigma.delta[[1]],
- sigma = mu.sigma.delta[[2]],
- delta = mu.sigma.delta[[3]]
+  x, 
+  y = 'pbgumbel', 
+  mu = mu.sigma.delta[[1]],
+  sigma = mu.sigma.delta[[2]],
+  delta = mu.sigma.delta[[3]]
 )
 ```
 
