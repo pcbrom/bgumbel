@@ -105,7 +105,7 @@ for (sigma in sigmas) {
 ```
 
 
-## Theoretical E(X^2) and empirical second moment
+## Theoretical E(X²) and empirical second moment
 
 ``` r
 (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
