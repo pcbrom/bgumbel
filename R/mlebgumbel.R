@@ -19,6 +19,17 @@
 #' #    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
 #' # )
 #' # fit # print results
+#'
+#' # # Kolmogorov-Smirnov Tests
+#' # mu.sigma.delta <- fit$estimate$estimate
+#' # ks.test(
+#' #   x,
+#' #   y = 'pbgumbel',
+#' #   mu = mu.sigma.delta[[1]],
+#' #   sigma = mu.sigma.delta[[2]],
+#' #   delta = mu.sigma.delta[[3]]
+#' # )
+
 #' @export
 
 mlebgumbel <- function(data, theta) {
@@ -70,3 +81,13 @@ mlebgumbel <- function(data, theta) {
 #' #    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
 #' # )
 #' # fit # print results
+#'
+#' # # Kolmogorov-Smirnov Tests
+#' # mu.sigma.delta <- fit$estimate$estimate
+#' # ks.test(
+#' #   x,
+#' #   y = 'pbgumbel',
+#' #   mu = mu.sigma.delta[[1]],
+#' #   sigma = mu.sigma.delta[[2]],
+#' #   delta = mu.sigma.delta[[3]]
+#' # )
