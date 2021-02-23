@@ -26,7 +26,7 @@ Bimodal Gumbel: Theoretical E(X)
 # # grid 1
 # mu <- seq(-5, 5, length.out = 100)
 # delta <- seq(-5, 5, length.out = 100)
-# # z <- outer(
+# z <- outer(
 #   X <- mu,
 #   Y <- delta,
 #   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
