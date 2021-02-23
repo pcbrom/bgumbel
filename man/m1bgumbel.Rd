@@ -16,3 +16,24 @@ m1bgumbel(mu, sigma, delta)
 \description{
 Bimodal Gumbel: Theoretical E(X)
 }
+\examples{
+# # Comparison: Theoretical E(X) and empirical mean
+# (EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
+# x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+# mean(x)
+# abs(EX - mean(x))/abs(EX) # relative error
+# # grid 1
+# mu <- seq(-5, 5, length.out = 100)
+# delta <- seq(-5, 5, length.out = 100)
+# z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y))
+# persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
+# # grid 2
+# mu <- seq(-5, 5, length.out = 100)
+# delta <- seq(-5, 5, length.out = 100)
+# sigmas <- seq(.1, 10, length.out = 20)
+# for (sigma in sigmas) {
+#   z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y))
+#   persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
+#   Sys.sleep(.5)
+# }
+}

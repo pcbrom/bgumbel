@@ -3,7 +3,7 @@
 #' @param mu First location parameter.
 #' @param sigma Scale parameter.
 #' @param delta Second location parameter.
-#' #' @examples
+#' @examples
 #' # Comparison: Theoretical E(X^2) and empirical second moment
 #' (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
 #' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
@@ -55,7 +55,7 @@ m2bgumbel <- function(mu, sigma, delta) {
 
 m2bgumbel <- Vectorize(m2bgumbel, c('mu', 'sigma', 'delta'))
 
-#' #' @examples
+#' @examples
 #' # Comparison: Theoretical E(X^2) and empirical second moment
 #' (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
 #' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
