@@ -25,9 +25,14 @@ We propose a new model with three parameters called bimodal Gumbel (BG) as a gen
 
 You can install the released version of bgumbel from [CRAN](https://CRAN.R-project.org) with:
 
-
 ``` r
 install.packages("bgumbel")
+```
+or using devtools
+
+``` r
+library(devtools)
+install_github('pcbrom/bgumbel')
 ```
 
 
@@ -136,7 +141,26 @@ for (sigma in sigmas) {
 }
 ```
 
+## Maximum Likelihood Estimation
 
+``` r
+# Let's generate some values
+set.seed(123)
+x <- rbgumbel(1000, mu = -2, sigma = 1, delta = -1)
+
+# Look for these references in the figure:
+hist(x, probability = T)
+lines(density(x), col = 'blue')
+abline(v = c(-2.5, -.5), col = 'red')
+text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))
+
+# Time to fit!
+fit <- mlebgumbel(
+  data = x,
+  theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
+)
+fit # print results
+```
 
 ## Issues
 

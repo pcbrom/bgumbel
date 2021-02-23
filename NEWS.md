@@ -1,4 +1,4 @@
-# bgumbel 0.0.1.1
+# bgumbel 0.0.1
 
 ## New functions:
 
@@ -10,3 +10,8 @@ m1bgumbel
 ### Theoretical E(X^2)
 
 m2bgumbel
+
+
+### Maximum Likelihood Estimation
+
+mlebgumbel

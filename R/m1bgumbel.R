@@ -13,7 +13,11 @@
 #' # # grid 1
 #' # mu <- seq(-5, 5, length.out = 100)
 #' # delta <- seq(-5, 5, length.out = 100)
-#' # z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y))
+#' # # z <- outer(
+#' #   X <- mu,
+#' #   Y <- delta,
+#' #   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
+#' # )
 #' # persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
 #'
 #' # # grid 2
@@ -21,7 +25,11 @@
 #' # delta <- seq(-5, 5, length.out = 100)
 #' # sigmas <- seq(.1, 10, length.out = 20)
 #' # for (sigma in sigmas) {
-#' #   z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y))
+#' #   z <- outer(
+#' #     X <- mu,
+#' #     Y <- delta,
+#' #     FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y)
+#' #   )
 #' #   persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
 #' #   Sys.sleep(.5)
 #' # }
@@ -64,7 +72,11 @@ m1bgumbel <- Vectorize(m1bgumbel, c('mu', 'sigma', 'delta'))
 #' # # grid 1
 #' # mu <- seq(-5, 5, length.out = 100)
 #' # delta <- seq(-5, 5, length.out = 100)
-#' # z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y))
+#' # # z <- outer(
+#' #   X <- mu,
+#' #   Y <- delta,
+#' #   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
+#' # )
 #' # persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
 #'
 #' # # grid 2
@@ -72,7 +84,11 @@ m1bgumbel <- Vectorize(m1bgumbel, c('mu', 'sigma', 'delta'))
 #' # delta <- seq(-5, 5, length.out = 100)
 #' # sigmas <- seq(.1, 10, length.out = 20)
 #' # for (sigma in sigmas) {
-#' #   z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y))
+#' #   z <- outer(
+#' #     X <- mu,
+#' #     Y <- delta,
+#' #     FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y)
+#' #   )
 #' #   persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
 #' #   Sys.sleep(.5)
 #' # }

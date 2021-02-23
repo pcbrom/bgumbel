@@ -4,33 +4,41 @@
 #' @param sigma Scale parameter.
 #' @param delta Second location parameter.
 #' @examples
-#' # Comparison: Theoretical E(X^2) and empirical second moment
-#' (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
-#' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' mean(x^2)
-#' abs(EX2 - mean(x))/abs(EX2) # relative error
+#' # # Comparison: Theoretical E(X^2) and empirical second moment
+#' # (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
+#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+#' # mean(x^2)
+#' # abs(EX2 - mean(x))/abs(EX2) # relative error
 #'
 #' # Variance
-#' EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
-#' EX2 - EX^2
-#' var(x)
-#' abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
-#'
-#' # grid 1
-#' mu <- seq(-5, 5, length.out = 100)
-#' delta <- seq(-5, 5, length.out = 100)
-#' z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y))
-#' persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
-#'
+#' # EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
+#' # EX2 - EX^2
+#' # var(x)
+#' # abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
+#' #
+#' # # grid 1
+#' # mu <- seq(-5, 5, length.out = 100)
+#' # delta <- seq(-5, 5, length.out = 100)
+#' # # z <- outer(
+#' # #   X <- mu,
+#' # #   Y <- delta,
+#' # #   FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y)
+#' # # )
+#' # persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
+#' #
 #' # grid 2
-#' mu <- seq(-5, 5, length.out = 100)
-#' delta <- seq(-5, 5, length.out = 100)
-#' sigmas <- seq(.1, 10, length.out = 20)
-#' for (sigma in sigmas) {
-#'   z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = sigma, delta = y))
-#'   persp(x = mu, y = delta, z = z, theta = -45, zlab = 'E(X^2)')
-#'   Sys.sleep(.5)
-#' }
+#' # mu <- seq(-5, 5, length.out = 100)
+#' # delta <- seq(-5, 5, length.out = 100)
+#' # sigmas <- seq(.1, 10, length.out = 20)
+#' # for (sigma in sigmas) {
+#' #   z <- outer(
+#' #     X <- mu,
+#' #     Y <- delta,
+#' #     FUN = function(x, y) m2bgumbel(mu = x, sigma = sigma, delta = y)
+#' #   )
+#' #   persp(x = mu, y = delta, z = z, theta = -45, zlab = 'E(X^2)')
+#' #   Sys.sleep(.5)
+#' # }
 #' @export
 
 m2bgumbel <- function(mu, sigma, delta) {
@@ -59,30 +67,38 @@ m2bgumbel <- function(mu, sigma, delta) {
 m2bgumbel <- Vectorize(m2bgumbel, c('mu', 'sigma', 'delta'))
 
 #' @examples
-#' # Comparison: Theoretical E(X^2) and empirical second moment
-#' (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
-#' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' mean(x^2)
-#' abs(EX2 - mean(x))/abs(EX2) # relative error
+#' # # Comparison: Theoretical E(X^2) and empirical second moment
+#' # (EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
+#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+#' # mean(x^2)
+#' # abs(EX2 - mean(x))/abs(EX2) # relative error
 #'
 #' # Variance
-#' EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
-#' EX2 - EX^2
-#' var(x)
-#' abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
-#'
-#' # grid 1
-#' mu <- seq(-5, 5, length.out = 100)
-#' delta <- seq(-5, 5, length.out = 100)
-#' z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y))
-#' persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
-#'
+#' # EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1)
+#' # EX2 - EX^2
+#' # var(x)
+#' # abs(EX2 - EX^2 - var(x))/abs(EX2 - EX^2) # relative error
+#' #
+#' # # grid 1
+#' # mu <- seq(-5, 5, length.out = 100)
+#' # delta <- seq(-5, 5, length.out = 100)
+#' # # z <- outer(
+#' # #   X <- mu,
+#' # #   Y <- delta,
+#' # #   FUN = function(x, y) m2bgumbel(mu = x, sigma = 1, delta = y)
+#' # # )
+#' # persp(x = mu, y = delta, z = z, theta = -30, ticktype = 'detailed')
+#' #
 #' # grid 2
-#' mu <- seq(-5, 5, length.out = 100)
-#' delta <- seq(-5, 5, length.out = 100)
-#' sigmas <- seq(.1, 10, length.out = 20)
-#' for (sigma in sigmas) {
-#'   z <- outer(X <- mu, Y <- delta, FUN = function(x, y) m2bgumbel(mu = x, sigma = sigma, delta = y))
-#'   persp(x = mu, y = delta, z = z, theta = -45, zlab = 'E(X^2)')
-#'   Sys.sleep(.5)
-#' }
+#' # mu <- seq(-5, 5, length.out = 100)
+#' # delta <- seq(-5, 5, length.out = 100)
+#' # sigmas <- seq(.1, 10, length.out = 20)
+#' # for (sigma in sigmas) {
+#' #   z <- outer(
+#' #     X <- mu,
+#' #     Y <- delta,
+#' #     FUN = function(x, y) m2bgumbel(mu = x, sigma = sigma, delta = y)
+#' #   )
+#' #   persp(x = mu, y = delta, z = z, theta = -45, zlab = 'E(X^2)')
+#' #   Sys.sleep(.5)
+#' # }

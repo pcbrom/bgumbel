@@ -3,6 +3,7 @@
 export(dbgumbel)
 export(m1bgumbel)
 export(m2bgumbel)
+export(mlebgumbel)
 export(pbgumbel)
 export(qbgumbel)
 export(rbgumbel)
