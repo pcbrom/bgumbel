@@ -6,12 +6,15 @@
 #' @param delta Second location parameter.
 #' @param initial Starting point of range in desired quantile.
 #' @param final Starting point of range in desired quantile.
+#' @return Vector.
 #' @examples
+#' \donttest{
 #' # It is recommended to set up a pbgumbel graph to see the starting and ending
 #' # range of the desired quantile.
-#' # curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 5))
-#' # (value <- qbgumbel(.25, mu = -2, sigma = 1, delta = -1, initial = -4, final = -2))
-#' # pbgumbel(value, mu = -2, sigma = 1, delta = -1)
+#' curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 5))
+#' (value <- qbgumbel(.25, mu = -2, sigma = 1, delta = -1, initial = -4, final = -2))
+#' pbgumbel(value, mu = -2, sigma = 1, delta = -1)
+#' }
 #' @export
 
 qbgumbel <- function(p, mu, sigma, delta, initial = -10, final = 10) {
@@ -63,9 +66,3 @@ qbgumbel <- function(p, mu, sigma, delta, initial = -10, final = 10) {
 }
 
 qbgumbel <- Vectorize(qbgumbel, 'p')
-
-#' @examples
-#' It is recommended to set up a pbgumbel graph to see the starting and ending range of the desired quantile.
-#' curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 5))
-#' (value <- qbgumbel(.25, mu = -2, sigma = 1, delta = -1, initial = -4, final = -2))
-#' pbgumbel(value, mu = -2, sigma = 1, delta = -1)

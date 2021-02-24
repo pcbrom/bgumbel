@@ -5,12 +5,15 @@
 #' @param mu First location parameter.
 #' @param sigma Scale parameter.
 #' @param delta Second location parameter.
+#' @return A matrix nx1.
 #' @import MCMCpack
 #' @examples
-#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' # hist(x, probability = T)
-#' # curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
-#' # lines(density(x), col = 'red')
+#' \donttest{
+#' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+#' hist(x, probability = TRUE)
+#' curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
+#' lines(density(x), col = 'red')
+#' }
 #' @export
 
 rbgumbel <- function(n, mu, sigma, delta) {
@@ -47,9 +50,3 @@ rbgumbel <- function(n, mu, sigma, delta) {
 }
 
 rbgumbel <- Vectorize(rbgumbel, 'n')
-
-#' @examples
-#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' # hist(x, probability = T)
-#' # curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
-#' # lines(density(x), col = 'red')

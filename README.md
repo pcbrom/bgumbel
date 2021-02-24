@@ -78,7 +78,7 @@ pbgumbel(value, mu = -2, sigma = 1, delta = -1)
 
 ``` r
 x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-hist(x, probability = T)
+hist(x, probability = TRUE)
 curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
 lines(density(x), col = 'red')
 ```
@@ -149,7 +149,7 @@ set.seed(123)
 x <- rbgumbel(1000, mu = -2, sigma = 1, delta = -1)
 
 # Look for these references in the figure:
-hist(x, probability = T)
+hist(x, probability = TRUE)
 lines(density(x), col = 'blue')
 abline(v = c(-2.5, -.5), col = 'red')
 text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))

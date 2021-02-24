@@ -5,11 +5,14 @@
 #' @param sigma Scale parameter.
 #' @param delta Second location parameter.
 #' @param lower.tail 	Logical; if TRUE (default), probabilities are P(X <= x) otherwise, P(X > x).
+#' @return Vector.
 #' @examples
+#' \donttest{
 #' pbgumbel(0, mu = -2, sigma = 1, delta = -1)
 #' integrate(dbgumbel, mu = -2, sigma = 1, delta = -1, lower = -Inf, upper = 0)
 #' pbgumbel(0, mu = -2, sigma = 1, delta = -1, lower.tail = FALSE)
 #' curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 10))
+#' }
 #' @export
 
 pbgumbel <- function(q, mu, sigma, delta, lower.tail = TRUE) {
@@ -47,10 +50,3 @@ pbgumbel <- function(q, mu, sigma, delta, lower.tail = TRUE) {
 }
 
 pbgumbel <- Vectorize(pbgumbel, 'q')
-
-#' @examples
-#' pbgumbel(0, mu = -2, sigma = 1, delta = -1)
-#' integrate(dbgumbel, mu = -2, sigma = 1, delta = -1, lower = -Inf, upper = 0)
-#' pbgumbel(0, mu = -2, sigma = 1, delta = -1, lower.tail = FALSE)
-#' curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 10))
-

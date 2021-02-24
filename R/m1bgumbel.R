@@ -3,36 +3,45 @@
 #' @param mu First location parameter.
 #' @param sigma Scale parameter.
 #' @param delta Second location parameter.
+#' @return Vector.
 #' @examples
-#' # # Comparison: Theoretical E(X) and empirical mean
-#' # (EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
-#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' # mean(x)
-#' # abs(EX - mean(x))/abs(EX) # relative error
+#' \donttest{
+#' # Comparison: Theoretical E(X) and empirical mean
 #'
-#' # # grid 1
-#' # mu <- seq(-5, 5, length.out = 100)
-#' # delta <- seq(-5, 5, length.out = 100)
-#' # z <- outer(
-#' #   X <- mu,
-#' #   Y <- delta,
-#' #   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
-#' # )
-#' # persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
+#' (EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
+#' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+#' mean(x)
+#' abs(EX - mean(x))/abs(EX) # relative error
 #'
-#' # # grid 2
-#' # mu <- seq(-5, 5, length.out = 100)
-#' # delta <- seq(-5, 5, length.out = 100)
-#' # sigmas <- seq(.1, 10, length.out = 20)
-#' # for (sigma in sigmas) {
-#' #   z <- outer(
-#' #     X <- mu,
-#' #     Y <- delta,
-#' #     FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y)
-#' #   )
-#' #   persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
-#' #   Sys.sleep(.5)
-#' # }
+#' # grid 1
+#'
+#' mu <- seq(-5, 5, length.out = 100)
+#' delta <- seq(-5, 5, length.out = 100)
+#' z <- outer(
+#'   X <- mu,
+#'   Y <- delta,
+#'   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
+#' )
+#'
+#' persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
+#'
+#' # grid 2
+#'
+#' mu <- seq(-5, 5, length.out = 100)
+#' delta <- seq(-5, 5, length.out = 100)
+#' sigmas <- seq(.1, 10, length.out = 20)
+#'
+#' for (sigma in sigmas) {
+#'  z <- outer(
+#'    X <- mu,
+#'    Y <- delta,
+#'     FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y)
+#'  )
+#'  persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
+#'  Sys.sleep(.5)
+#' }
+#' }
+
 #' @export
 
 m1bgumbel <- function(mu, sigma, delta) {
@@ -61,34 +70,3 @@ m1bgumbel <- function(mu, sigma, delta) {
 }
 
 m1bgumbel <- Vectorize(m1bgumbel, c('mu', 'sigma', 'delta'))
-
-#' @examples
-#' # # Comparison: Theoretical E(X) and empirical mean
-#' # (EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
-#' # x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-#' # mean(x)
-#' # abs(EX - mean(x))/abs(EX) # relative error
-#'
-#' # # grid 1
-#' # mu <- seq(-5, 5, length.out = 100)
-#' # delta <- seq(-5, 5, length.out = 100)
-#' # z <- outer(
-#' #   X <- mu,
-#' #   Y <- delta,
-#' #   FUN = function(x, y) m1bgumbel(mu = x, sigma = 1, delta = y)
-#' # )
-#' # persp(x = mu, y = delta, z = z, theta = -60, ticktype = 'detailed')
-#'
-#' # # grid 2
-#' # mu <- seq(-5, 5, length.out = 100)
-#' # delta <- seq(-5, 5, length.out = 100)
-#' # sigmas <- seq(.1, 10, length.out = 20)
-#' # for (sigma in sigmas) {
-#' #   z <- outer(
-#' #     X <- mu,
-#' #     Y <- delta,
-#' #     FUN = function(x, y) m1bgumbel(mu = x, sigma = sigma, delta = y)
-#' #   )
-#' #   persp(x = mu, y = delta, z = z, theta = -60, zlab = 'E(X)')
-#' #   Sys.sleep(.5)
-#' # }

@@ -2,34 +2,40 @@
 #'
 #' @param data A numeric vector.
 #' @param theta Vector. Starting parameter values for the minimization. Default: theta = c(1, 1, 1)
+#' @return List.
 #' @examples
-#' # # Let's generate some values
-#' # set.seed(123)
-#' # x <- rbgumbel(1000, mu = -2, sigma = 1, delta = -1)
-#' #
-#' # # Look for these references in the figure:
-#' # hist(x, probability = T)
-#' # lines(density(x), col = 'blue')
-#' # abline(v = c(-2.5, -.5), col = 'red')
-#' # text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))
-#' #
-#' # # Time to fit!
-#' # fit <- mlebgumbel(
-#' #    data = x,
-#' #    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
-#' # )
-#' # fit # print results
+#' \donttest{
+#' # Let's generate some values
 #'
-#' # # Kolmogorov-Smirnov Tests
-#' # mu.sigma.delta <- fit$estimate$estimate
-#' # ks.test(
-#' #   x,
-#' #   y = 'pbgumbel',
-#' #   mu = mu.sigma.delta[[1]],
-#' #   sigma = mu.sigma.delta[[2]],
-#' #   delta = mu.sigma.delta[[3]]
-#' # )
-
+#' set.seed(123)
+#' x <- rbgumbel(1000, mu = -2, sigma = 1, delta = -1)
+#'
+#' # Look for these references in the figure:
+#'
+#' hist(x, probability = TRUE)
+#' lines(density(x), col = 'blue')
+#' abline(v = c(-2.5, -.5), col = 'red')
+#' text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))
+#'
+#' # Time to fit!
+#'
+#' fit <- mlebgumbel(
+#'    data = x,
+#'    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
+#' )
+#' print(fit)
+#'
+#' # Kolmogorov-Smirnov Tests
+#'
+#' mu.sigma.delta <- fit$estimate$estimate
+#' ks.test(
+#'   x,
+#'   y = 'pbgumbel',
+#'   mu = mu.sigma.delta[[1]],
+#'   sigma = mu.sigma.delta[[2]],
+#'   delta = mu.sigma.delta[[3]]
+#' )
+#' }
 #' @export
 
 mlebgumbel <- function(data, theta) {
@@ -63,31 +69,3 @@ mlebgumbel <- function(data, theta) {
   return(y)
 
 }
-
-#' @examples
-#' # # Let's generate some values
-#' # set.seed(123)
-#' # x <- rbgumbel(1000, mu = -2, sigma = 1, delta = -1)
-#'
-#' # # Look for these references in the figure:
-#' # hist(x, probability = T)
-#' # lines(density(x), col = 'blue')
-#' # abline(v = c(-2.5, -.5), col = 'red')
-#' # text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))
-#'
-#' # # Time to fit!
-#' # fit <- mlebgumbel(
-#' #    data = x,
-#' #    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
-#' # )
-#' # fit # print results
-#'
-#' # # Kolmogorov-Smirnov Tests
-#' # mu.sigma.delta <- fit$estimate$estimate
-#' # ks.test(
-#' #   x,
-#' #   y = 'pbgumbel',
-#' #   mu = mu.sigma.delta[[1]],
-#' #   sigma = mu.sigma.delta[[2]],
-#' #   delta = mu.sigma.delta[[3]]
-#' # )

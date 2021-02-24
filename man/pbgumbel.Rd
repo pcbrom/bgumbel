@@ -17,12 +17,17 @@ pbgumbel(q, mu, sigma, delta, lower.tail = TRUE)
 
 \item{lower.tail}{Logical; if TRUE (default), probabilities are P(X <= x) otherwise, P(X > x).}
 }
+\value{
+Vector.
+}
 \description{
 Bimodal Gumbel: Distribution Function
 }
 \examples{
+\donttest{
 pbgumbel(0, mu = -2, sigma = 1, delta = -1)
 integrate(dbgumbel, mu = -2, sigma = 1, delta = -1, lower = -Inf, upper = 0)
 pbgumbel(0, mu = -2, sigma = 1, delta = -1, lower.tail = FALSE)
 curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 10))
+}
 }

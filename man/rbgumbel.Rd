@@ -15,12 +15,17 @@ rbgumbel(n, mu, sigma, delta)
 
 \item{delta}{Second location parameter.}
 }
+\value{
+A matrix nx1.
+}
 \description{
 Bimodal Gumbel: Pseudo-Random Numbers Generator
 }
 \examples{
-# x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
-# hist(x, probability = T)
-# curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
-# lines(density(x), col = 'red')
+\donttest{
+x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+hist(x, probability = TRUE)
+curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
+lines(density(x), col = 'red')
+}
 }
