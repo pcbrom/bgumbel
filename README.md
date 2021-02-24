@@ -177,7 +177,7 @@ ks.test(
 Please, send to: https://github.com/pcbrom/bgumbel/issues
 
 
-## To cite package ‘bgumbel’ in publications use:
+## To cite package ‘bgumbel’ in publications use
 
 ``` r
 citation("bgumbel")
