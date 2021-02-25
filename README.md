@@ -11,6 +11,7 @@ Status](https://travis-ci.org/pcbrom/bgumbel.svg?branch=master)](https://travis-
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/bgumbel)](https://cran.r-project.org/package=bgumbel)
 [![Downloads from the RStudio CRAN
 mirror](https://cranlogs.r-pkg.org/badges/grand-total/bgumbel)](https://cran.r-project.org/package=bgumbel)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=10408245)
 
 
 # bgumbel
