@@ -4,7 +4,6 @@
 #' @param theta Vector. Starting parameter values for the minimization. Default: theta = c(1, 1, 1)
 #' @return List.
 #' @examples
-#' \donttest{
 #' # Let's generate some values
 #'
 #' set.seed(123)
@@ -25,6 +24,7 @@
 #' )
 #' print(fit)
 #'
+#' \donttest{
 #' # Kolmogorov-Smirnov Tests
 #'
 #' mu.sigma.delta <- fit$estimate$estimate

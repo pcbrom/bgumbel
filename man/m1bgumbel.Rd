@@ -20,10 +20,11 @@ Vector.
 Bimodal Gumbel: Theoretical E(X)
 }
 \examples{
+(EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
+
 \donttest{
 # Comparison: Theoretical E(X) and empirical mean
 
-(EX <- m1bgumbel(mu = -2, sigma = 1, delta = -1))
 x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
 mean(x)
 abs(EX - mean(x))/abs(EX) # relative error

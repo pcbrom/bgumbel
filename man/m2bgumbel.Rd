@@ -20,9 +20,11 @@ Vector.
 Bimodal Gumbel: Theoretical E(X^2)
 }
 \examples{
+(EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
+
 \donttest{
 # Comparison: Theoretical E(X^2) and empirical second moment
-(EX2 <- m2bgumbel(mu = -2, sigma = 1, delta = -1))
+
 x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
 mean(x^2)
 abs(EX2 - mean(x))/abs(EX2) # relative error

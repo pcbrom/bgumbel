@@ -24,10 +24,8 @@ Vector.
 Bimodal Gumbel: Distribution Function
 }
 \examples{
-\donttest{
 pbgumbel(0, mu = -2, sigma = 1, delta = -1)
 integrate(dbgumbel, mu = -2, sigma = 1, delta = -1, lower = -Inf, upper = 0)
 pbgumbel(0, mu = -2, sigma = 1, delta = -1, lower.tail = FALSE)
 curve(pbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 10))
-}
 }

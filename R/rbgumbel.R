@@ -8,12 +8,10 @@
 #' @return A matrix nx1.
 #' @import MCMCpack
 #' @examples
-#' \donttest{
-#' x <- rbgumbel(100000, mu = -2, sigma = 1, delta = -1)
+#' x <- rbgumbel(40000, mu = -2, sigma = 1, delta = -1)
 #' hist(x, probability = TRUE)
 #' curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), add = TRUE, col = 'blue')
 #' lines(density(x), col = 'red')
-#' }
 #' @export
 
 rbgumbel <- function(n, mu, sigma, delta) {

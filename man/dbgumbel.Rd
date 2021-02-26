@@ -22,9 +22,7 @@ Vector.
 Bimodal Gumbel: Density Function
 }
 \examples{
-\donttest{
 dbgumbel(x = 0, mu = -2, sigma = 1, delta = -1)
 curve(dbgumbel(x, mu = -2, sigma = 1, delta = -1), xlim = c(-5, 10))
 integrate(dbgumbel, mu = -2, sigma = 1, delta = -1, lower = -5, upper = 0)
-}
 }
