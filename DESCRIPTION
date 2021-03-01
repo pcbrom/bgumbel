@@ -11,17 +11,17 @@ Authors@R:
            family = "E. G. Otiniano",
            role = c("aut", "cph"),
            email = "ciragotiniano@gmail.com",
-           comment = c(ORCID = "https://orcid.org/0000-0002-5619-0478")),
+           comment = c(ORCID = "https://orcid.org/0000-0002-5619-0478", Lattes = "http://lattes.cnpq.br/0307717595727716")),
     person(given = "Roberto",
            family = "Vila",
            role = c("aut", "cph"),
            email = "rovig161@gmail.com",
-           comment = c(ORCID = "https://orcid.org/0000-0003-1073-0114")),
+           comment = c(ORCID = "https://orcid.org/0000-0003-1073-0114", Lattes = "http://lattes.cnpq.br/4978745622057574")),
     person(given = "Marcelo",
            family = "B. Pereira",
            role = c("aut", "cph"),
            email = "m.p.bourguignon@gmail.com",
-           comment = c(ORCID = "https://orcid.org/0000-0002-1182-5193")))
+           comment = c(ORCID = "https://orcid.org/0000-0002-1182-5193", Lattes = "https://lattes.cnpq.br/9358366674842900")))
 Description: Bimodal Gumbel distribution. General functions for performing extreme value analysis.
 Imports: 
     MCMCpack,
