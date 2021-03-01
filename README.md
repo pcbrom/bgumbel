@@ -10,7 +10,7 @@
 Status](https://travis-ci.org/pcbrom/bgumbel.svg?branch=master)](https://travis-ci.org/pcbrom/bgumbel)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/bgumbel)](https://cran.r-project.org/package=bgumbel)
 [![Downloads from the RStudio CRAN
-mirror](https://cranlogs.r-pkg.org/badges/grand-total/bgumbel)](https://cran.r-project.org/package=bgumbel)
+mirror](https://cranlogs.r-pkg.org/badges/bgumbel)](https://cran.r-project.org/package=bgumbel)
 
 
 
