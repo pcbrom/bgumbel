@@ -8,7 +8,7 @@
 
 [![Build Status](https://travis-ci.org/pcbrom/bgumbel.svg?branch=main)](https://travis-ci.org/pcbrom/bgumbel)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/last-release/bgumbel)](https://cran.r-project.org/package=bgumbel)
-[![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/bgumbel)](https://cran.r-project.org/package=bgumbel)
+[![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/grand-total/bgumbel)](https://cran.r-project.org/package=bgumbel)
 
 
 
