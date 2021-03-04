@@ -25,7 +25,8 @@ Authors@R:
 Description: Bimodal Gumbel distribution. General functions for performing extreme value analysis.
 Imports: 
     MCMCpack,
-    MASS
+    MASS,
+    quantreg
 License: MIT + file LICENSE
 Language: en-US
 Encoding: UTF-8
