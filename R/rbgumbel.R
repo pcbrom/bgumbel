@@ -9,6 +9,7 @@
 #' @import MCMCpack
 #' @import quantreg
 #' @import SparseM
+#' @import coda
 #' @examples
 #' x <- rbgumbel(40000, mu = -2, sigma = 1, delta = -1)
 #' hist(x, probability = TRUE)
