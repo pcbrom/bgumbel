@@ -3,6 +3,7 @@
 #' @param data A numeric vector.
 #' @param theta Vector. Starting parameter values for the minimization. Default: theta = c(1, 1, 1)
 #' @return List.
+#' @import MASS
 #' @examples
 #' # Let's generate some values
 #'

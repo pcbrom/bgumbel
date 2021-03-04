@@ -7,6 +7,8 @@
 #' @param delta Second location parameter.
 #' @return A matrix nx1.
 #' @import MCMCpack
+#' @import quantreg
+#' @import SparseM
 #' @examples
 #' x <- rbgumbel(40000, mu = -2, sigma = 1, delta = -1)
 #' hist(x, probability = TRUE)
