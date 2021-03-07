@@ -25,7 +25,7 @@ Authors@R:
 Description: Bimodal Gumbel distribution. General functions for performing extreme value analysis.
 Imports: MCMCpack, MASS, quantreg, SparseM, coda
 License: MIT + file LICENSE
-SystemRequirements: gcc (>= 4.0)
+SystemRequirements: gcc (>= 4.0), gfortran
 NeedsCompilation: yes
 URL: https://CRAN.R-project.org/package=bgumbel
 Language: en-US
