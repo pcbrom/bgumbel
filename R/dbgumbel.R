@@ -19,3 +19,6 @@ dbgumbel <- function(x, mu, sigma, delta) {
 }
 
 dbgumbel <- Vectorize(dbgumbel, 'x')
+
+
+
