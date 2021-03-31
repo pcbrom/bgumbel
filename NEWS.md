@@ -1,4 +1,4 @@
-# bgumbel 0.0.2.3
+# bgumbel 0.0.3
 
 ## Function mlebgumbel
 

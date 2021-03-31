@@ -5,6 +5,7 @@
 #' @param auto Logical. Automatic search for theta initial condition. Default: TRUE
 #' @return List.
 #' @import MASS
+#' @importFrom ("stats", "nlm")
 #' @examples
 #' # Let's generate some values
 #'
