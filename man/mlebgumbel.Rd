@@ -4,12 +4,14 @@
 \alias{mlebgumbel}
 \title{Bimodal Gumbel: Maximum Likelihood Estimation}
 \usage{
-mlebgumbel(data, theta)
+mlebgumbel(data, theta, auto = TRUE)
 }
 \arguments{
 \item{data}{A numeric vector.}
 
 \item{theta}{Vector. Starting parameter values for the minimization. Default: theta = c(1, 1, 1)}
+
+\item{auto}{Logical. Automatic search for theta initial condition. Default: TRUE}
 }
 \value{
 List.
@@ -32,9 +34,19 @@ text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'
 
 # Time to fit!
 
+# If argument auto = FALSE
 fit <- mlebgumbel(
    data = x,
-   theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
+   # try some values near the region. Format: theta = c(mu, sigma, delta)
+   theta = c(-3, 2, -2),
+   auto = FALSE
+)
+print(fit)
+
+# If argument auto = TRUE
+fit <- mlebgumbel(
+   data = x,
+   auto = TRUE
 )
 print(fit)
 
