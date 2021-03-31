@@ -23,7 +23,7 @@ Authors@R:
            email = "m.p.bourguignon@gmail.com",
            comment = c(ORCID = "https://orcid.org/0000-0002-1182-5193", Lattes = "https://lattes.cnpq.br/9358366674842900")))
 Description: Bimodal Gumbel distribution. General functions for performing extreme value analysis.
-Imports: MCMCpack, MASS, quantreg, SparseM, coda
+Imports: MCMCpack, MASS, quantreg, SparseM, coda, stats
 License: MIT + file LICENSE
 SystemRequirements: gcc (>= 4.0), gfortran, clang++
 NeedsCompilation: yes
