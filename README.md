@@ -153,12 +153,21 @@ lines(density(x), col = 'blue')
 abline(v = c(-2.5, -.5), col = 'red')
 text(x = c(c(-2.5, -.5)), y = c(.05, .05), c('mu\nnear here', 'delta\nnear here'))
 
-# Time to fit!
+# If argument auto = FALSE
 fit <- mlebgumbel(
   data = x,
-  theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
+  # try some values near the region. Format: theta = c(mu, sigma, delta)
+  theta = c(-3, 2, -2),
+  auto = FALSE
 )
-fit # print results
+print(fit)
+
+# If argument auto = TRUE
+fit <- mlebgumbel(
+  data = x,
+  auto = TRUE
+)
+print(fit)
 
 # Kolmogorov-Smirnov Tests
 mu.sigma.delta <- fit$estimate$estimate

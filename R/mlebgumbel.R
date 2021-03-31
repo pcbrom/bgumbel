@@ -2,6 +2,7 @@
 #'
 #' @param data A numeric vector.
 #' @param theta Vector. Starting parameter values for the minimization. Default: theta = c(1, 1, 1)
+#' @param auto Logical. Automatic search for theta initial condition. Default: TRUE
 #' @return List.
 #' @import MASS
 #' @examples
@@ -19,9 +20,19 @@
 #'
 #' # Time to fit!
 #'
+#' # If argument auto = FALSE
 #' fit <- mlebgumbel(
 #'    data = x,
-#'    theta = c(-3, 2, -2) # try some values near the region. Format: theta = c(mu, sigma, delta)
+#'    # try some values near the region. Format: theta = c(mu, sigma, delta)
+#'    theta = c(-3, 2, -2),
+#'    auto = FALSE
+#' )
+#' print(fit)
+#'
+#' # If argument auto = TRUE
+#' fit <- mlebgumbel(
+#'    data = x,
+#'    auto = TRUE
 #' )
 #' print(fit)
 #'
@@ -39,7 +50,18 @@
 #' }
 #' @export
 
-mlebgumbel <- function(data, theta) {
+mlebgumbel <- function(data, theta, auto = TRUE) {
+
+  if (auto) {
+    moments <- function(X) {
+      X[2] <- ifelse(X[2] < 0, -Inf, X[2])
+      y <- (m2bgumbel(X[1], X[2], X[3]) - mean(data^2))^2
+      z <- (m1bgumbel(X[1], X[2], X[3]) - mean(data))^2
+      w <- y + z
+      return(w)
+    }realizar
+    theta <- suppressWarnings({nlm(f = moments, p = c(1,1,1))$estimate})
+  }
 
   data <- data[!is.na(data)]
 
@@ -48,7 +70,7 @@ mlebgumbel <- function(data, theta) {
   }
 
   if (!is.vector(theta)) {
-    return('Starting parameter values must be a vector. Change theta.')
+    return('Starting param eter values must be a vector. Change theta.')
   }
 
   dbgumbel <- function(x, mu, sigma, delta) {

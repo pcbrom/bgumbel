@@ -1,3 +1,7 @@
-# bgumbel 0.0.2.2
+# bgumbel 0.0.2.3
 
-Description
+## Function mlebgumbel
+
+Automatic search for theta initial condition. Default: TRUE.
+
+With this new argument, it is not necessary to give the initial condition, theta, for inference of the parameters. An optimization is made using a loss function of the first and second moments.
