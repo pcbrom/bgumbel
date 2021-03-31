@@ -59,7 +59,7 @@ mlebgumbel <- function(data, theta, auto = TRUE) {
       z <- (m1bgumbel(X[1], X[2], X[3]) - mean(data))^2
       w <- y + z
       return(w)
-    }realizar
+    }
     theta <- suppressWarnings({nlm(f = moments, p = c(1,1,1))$estimate})
   }
 
